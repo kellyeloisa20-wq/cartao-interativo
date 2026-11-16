@@ -1,0 +1,154 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #071b42, #087cf5);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card-header {
+    height: 150px;
+    background: linear-gradient(135deg, #0066ff, #00b4db);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.badge {
+    background: white;
+    color: #0066ff;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.icon {
+    font-size: 55px;
+}
+
+.card-content {
+    padding: 25px;
+}
+
+h1 {
+    color: #14213d;
+    margin-bottom: 12px;
+    font-size: 28px;
+}
+
+.description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.extra-info {
+    display: none;
+    background: #eef6ff;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    color: #234;
+    line-height: 1.8;
+}
+
+.extra-info.active {
+    display: block;
+    animation: aparecer 0.4s ease;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+button {
+    padding: 13px;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: #0066ff;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #004ec4;
+}
+
+.btn-like {
+    background: #f1f5f9;
+    color: #e63946;
+}
+
+.btn-like:hover {
+    background: #ffe4e6;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+.card-footer {
+    background: #f5f7fa;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    color: #888;
+    font-size: 11px;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 480px) {
+    .card-content {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
